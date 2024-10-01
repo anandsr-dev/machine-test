@@ -9,14 +9,11 @@ app.use(bodyParser())
 
 app.post('/name', (req, res) => {
     names.push(req.body.name);
-    res.status(201).json({
-        status: "OK"
-    })
+    res.status(201).json({})
 })
 
 app.get('/name', (req, res) => {
     res.status(200).json({
-        status: "OK",
         names: names
     })
 })
